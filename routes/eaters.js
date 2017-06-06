@@ -42,7 +42,7 @@ router.post('/', function(req, res, next) {
 
 // {new:true} add if you need an immediate version of updated element
 router.patch('/:id', function(req, res, next) {
-  db.Eater.findByIdandUpdate(req.params.id, req.body.eater, {update:true}).then(function(eater) {
+  db.Eater.findByIdAndUpdate(req.params.id, req.body.eater, {update:true}).then(function(eater) {
     res.redirect('/eaters');
   }, function(err){
     next(err);
@@ -50,7 +50,7 @@ router.patch('/:id', function(req, res, next) {
 });
 
 router.delete('/:id', function(req, res, next) {
-  db.Eater.findByIdandRemove(req.params.id).then(function(eater) {
+  db.Eater.findByIdAndRemove(req.params.id).then(function(eater) {
     res.redirect('/eaters');
   }, function(err){
     next(err);

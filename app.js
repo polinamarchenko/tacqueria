@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var morgan = require('morgan');
+var methodOverride = require("method-override");
 var bodyParser = require('body-parser');
 const eatersRoutes = require('./routes/eaters')
 
@@ -45,4 +46,8 @@ app.use(function(err, req, res, next) {
     message: err.message,
     error: {}
   });
+});
+
+app.listen(3000, function() {
+  console.log("Server is listening on port 3000");
 });

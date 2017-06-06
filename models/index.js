@@ -7,4 +7,4 @@ mongoose.connect('mongodb://localhost/tacqueria-rithmo');
 mongoose.Promise = Promise //q or bluebird or ES2015 promises
 
 module.exports.Eater = require('./eater')
-// module.exports.Taco = require('./taco')
+module.exports.Taco = require('./taco')
