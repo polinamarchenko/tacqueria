@@ -1,0 +1,5 @@
+extends base.pug
+block content
+  p 
+    span #{eater.name} : #{eater.favoriteTopping} &nbsp;
+    a(href=`/eaters/${eater.id}/edit`) Edit  
